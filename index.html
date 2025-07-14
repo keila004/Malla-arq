@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Arquitectura</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+    .semestre {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      min-width: 200px;
+      flex-shrink: 0;
+    }
+    .semestre h2 {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .ramo {
+      background-color: #e0e0ff;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color 0.3s ease;
+    }
+    .ramo.tachado {
+      background-color: #d4edda;
+      text-decoration: line-through;
+      color: #666;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular Arquitectura – Vista Horizontal</h1>
+  <div class="container">
+<div class="semestre"><h2>Semestre I</h2>
+        <div class="ramo" id="ramo-0-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('0-0')" id="cb-0-0">
+            Taller de Proyectos I
+          </label>
+        </div>
+        <div class="ramo" id="ramo-0-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('0-1')" id="cb-0-1">
+            Fundamentos de la Arquitectura
+          </label>
+        </div>
+        <div class="ramo" id="ramo-0-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('0-2')" id="cb-0-2">
+            Comunicación Gráfica
+          </label>
+        </div>
+        <div class="ramo" id="ramo-0-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('0-3')" id="cb-0-3">
+            Medios de Representación
+          </label>
+        </div>
+        <div class="ramo" id="ramo-0-4">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('0-4')" id="cb-0-4">
+            Seminario Cultura I
+          </label>
+        </div>
+        <div class="ramo" id="ramo-0-5">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('0-5')" id="cb-0-5">
+            Habilidades Comunicativas
+          </label>
+        </div></div><div class="semestre"><h2>Semestre II</h2>
+        <div class="ramo" id="ramo-1-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('1-0')" id="cb-1-0">
+            Taller de Proyectos II
+          </label>
+        </div>
+        <div class="ramo" id="ramo-1-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('1-1')" id="cb-1-1">
+            Historia y Teorías de la Arquitectura I
+          </label>
+        </div>
+        <div class="ramo" id="ramo-1-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('1-2')" id="cb-1-2">
+            Pensamiento Matemático
+          </label>
+        </div>
+        <div class="ramo" id="ramo-1-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('1-3')" id="cb-1-3">
+            Dibujo Técnico
+          </label>
+        </div>
+        <div class="ramo" id="ramo-1-4">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('1-4')" id="cb-1-4">
+            Seminario Cultura II
+          </label>
+        </div>
+        <div class="ramo" id="ramo-1-5">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('1-5')" id="cb-1-5">
+            Pensamiento Crítico
+          </label>
+        </div></div><div class="semestre"><h2>Semestre III</h2>
+        <div class="ramo" id="ramo-2-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('2-0')" id="cb-2-0">
+            Taller de Proyectos III
+          </label>
+        </div>
+        <div class="ramo" id="ramo-2-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('2-1')" id="cb-2-1">
+            Historia y Teorías de la Arquitectura II
+          </label>
+        </div>
+        <div class="ramo" id="ramo-2-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('2-2')" id="cb-2-2">
+            Física de la Construcción
+          </label>
+        </div>
+        <div class="ramo" id="ramo-2-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('2-3')" id="cb-2-3">
+            Liderazgo y Trabajo en Equipo
+          </label>
+        </div>
+        <div class="ramo" id="ramo-2-4">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('2-4')" id="cb-2-4">
+            Cultura Contemporánea
+          </label>
+        </div>
+        <div class="ramo" id="ramo-2-5">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('2-5')" id="cb-2-5">
+            Inglés I
+          </label>
+        </div></div><div class="semestre"><h2>Semestre IV</h2>
+        <div class="ramo" id="ramo-3-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('3-0')" id="cb-3-0">
+            Taller de Proyectos IV
+          </label>
+        </div>
+        <div class="ramo" id="ramo-3-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('3-1')" id="cb-3-1">
+            Estructuración
+          </label>
+        </div>
+        <div class="ramo" id="ramo-3-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('3-2')" id="cb-3-2">
+            Construcción I: Materialización
+          </label>
+        </div>
+        <div class="ramo" id="ramo-3-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('3-3')" id="cb-3-3">
+            Mercado y Entorno
+          </label>
+        </div>
+        <div class="ramo" id="ramo-3-4">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('3-4')" id="cb-3-4">
+            Inglés II
+          </label>
+        </div></div><div class="semestre"><h2>Semestre V</h2>
+        <div class="ramo" id="ramo-4-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('4-0')" id="cb-4-0">
+            Taller de Proyectos V: Integrador I
+          </label>
+        </div>
+        <div class="ramo" id="ramo-4-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('4-1')" id="cb-4-1">
+            Geografía y Territorio
+          </label>
+        </div>
+        <div class="ramo" id="ramo-4-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('4-2')" id="cb-4-2">
+            Bloque de Conocimientos I
+          </label>
+        </div>
+        <div class="ramo" id="ramo-4-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('4-3')" id="cb-4-3">
+            Creatividad y Emprendimiento
+          </label>
+        </div>
+        <div class="ramo" id="ramo-4-4">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('4-4')" id="cb-4-4">
+            Inglés III
+          </label>
+        </div></div><div class="semestre"><h2>Semestre VI</h2>
+        <div class="ramo" id="ramo-5-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('5-0')" id="cb-5-0">
+            Taller de Proyecto Interdisciplinar
+          </label>
+        </div>
+        <div class="ramo" id="ramo-5-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('5-1')" id="cb-5-1">
+            Construcción II: Tecnologías
+          </label>
+        </div>
+        <div class="ramo" id="ramo-5-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('5-2')" id="cb-5-2">
+            Bloque de Conocimientos II
+          </label>
+        </div>
+        <div class="ramo" id="ramo-5-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('5-3')" id="cb-5-3">
+            Bloque de Conocimientos III
+          </label>
+        </div>
+        <div class="ramo" id="ramo-5-4">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('5-4')" id="cb-5-4">
+            Inglés IV
+          </label>
+        </div></div><div class="semestre"><h2>Semestre VII</h2>
+        <div class="ramo" id="ramo-6-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('6-0')" id="cb-6-0">
+            Taller de Proyectos VI: Investigación
+          </label>
+        </div>
+        <div class="ramo" id="ramo-6-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('6-1')" id="cb-6-1">
+            Taller de Verano
+          </label>
+        </div>
+        <div class="ramo" id="ramo-6-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('6-2')" id="cb-6-2">
+            Construcción III: Sistemas
+          </label>
+        </div>
+        <div class="ramo" id="ramo-6-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('6-3')" id="cb-6-3">
+            Bloque de Conocimientos IV
+          </label>
+        </div>
+        <div class="ramo" id="ramo-6-4">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('6-4')" id="cb-6-4">
+            Bloque de Conocimientos V
+          </label>
+        </div></div><div class="semestre"><h2>Semestre VIII</h2>
+        <div class="ramo" id="ramo-7-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('7-0')" id="cb-7-0">
+            Taller de Proyectos VII: Integrador II
+          </label>
+        </div>
+        <div class="ramo" id="ramo-7-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('7-1')" id="cb-7-1">
+            Práctica Profesional I
+          </label>
+        </div>
+        <div class="ramo" id="ramo-7-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('7-2')" id="cb-7-2">
+            Gestión y Normas de Proyectos
+          </label>
+        </div>
+        <div class="ramo" id="ramo-7-3">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('7-3')" id="cb-7-3">
+            Arquitectura y Crítica
+          </label>
+        </div></div><div class="semestre"><h2>Semestre IX</h2>
+        <div class="ramo" id="ramo-8-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('8-0')" id="cb-8-0">
+            Taller de Proyectos VIII: Profesional
+          </label>
+        </div>
+        <div class="ramo" id="ramo-8-1">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('8-1')" id="cb-8-1">
+            Práctica Profesional II
+          </label>
+        </div>
+        <div class="ramo" id="ramo-8-2">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('8-2')" id="cb-8-2">
+            Proyecto de Título I
+          </label>
+        </div></div><div class="semestre"><h2>Semestre X</h2>
+        <div class="ramo" id="ramo-9-0">
+          <label>
+            <input type="checkbox" onchange="toggleRamo('9-0')" id="cb-9-0">
+            Proyecto de Título II: Integrador III
+          </label>
+        </div></div><div class="semestre"><h2>Semestre XI</h2></div>
+  </div>
+  <script>
+    function toggleRamo(id) {
+      const checkbox = document.getElementById('cb-' + id);
+      const ramo = document.getElementById('ramo-' + id);
+      if (checkbox.checked) {
+        ramo.classList.add('tachado');
+        localStorage.setItem('ramo-' + id, '1');
+      } else {
+        ramo.classList.remove('tachado');
+        localStorage.setItem('ramo-' + id, '0');
+      }
+    }
+
+    // Al cargar la página, restaurar estado
+    window.onload = function() {
+      const all = document.querySelectorAll('input[type=checkbox]');
+      all.forEach(cb => {
+        const id = cb.id.replace('cb-', '');
+        const saved = localStorage.getItem('ramo-' + id);
+        if (saved === '1') {
+          cb.checked = true;
+          document.getElementById('ramo-' + id).classList.add('tachado');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
